@@ -1,0 +1,103 @@
+.container{
+  width:600px;
+  height:700px;
+  text-align: center;
+  border:1px dashed black;
+  background: #ff6600;
+  margin:40px auto;
+  border-radius: 10px;
+}
+form{
+  width:540px;
+  height:600px;
+  margin:0 auto;
+  padding-top: 20px;
+  background: #4d515a;
+  color: #fff;
+  border-radius: 5px;
+}
+form .form-group{
+  margin:20px auto;
+  height:50px;
+  width:100%;
+}
+form label{
+  width:100px;
+  height:30px;
+  padding-top: 7px;
+  display: inline-block;
+  text-align: right;
+  font-size: 16px;
+  margin-right: 10px;
+  float: left;
+}
+form input{
+  display: inline-block;
+  height:30px;
+  width:280px;
+  padding-left: 5px;
+  margin-top:5px;
+  border:1px solid #4d515a;
+  border-radius: 5px;
+  color:#4d515a;
+  /*float: left;*/
+  /*margin-left: 10px;*/
+}
+form .form-group .sex{
+  display: inline-block;
+  width:15px;
+  height:15px;
+  margin:0 5px 0 0;
+}
+form .form-group p{
+  display: inline-block;
+  width:30px;
+  height:30px;
+  line-height: 30px;
+  font-size: 16px;
+  margin:0 20px 0 0;
+}
+form button {
+  font-family: Arial;
+  background-color: #88ff00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  cursor: hand;
+  margin-top:50px;
+  font-size: 28px;
+  height:60px;
+  width: 120px;
+}
+form button:hover {
+  background-color: #cfd8dc;
+}
+form button:disabled {
+  background-color: #ff0000;
+  color: #fff;
+  cursor: auto;
+}
+/*.ng-valid[required], .ng-valid.required  {*/
+  /*border-left: 5px solid #42A948; !* green *!*/
+/*}*/
+
+/*.ng-invalid:not(form)  {*/
+  /*border-left: 5px solid #a94442; !* red *!*/
+/*}*/
+.save{
+  margin-right: 30px;
+}
+.cancel{
+  margin-left:30px;
+}
+.sex{
+  margin-left: 30px;
+}
+.alert{
+  height:30px;
+  margin-top:5px;
+  width:280px;
+  margin-left:185px;
+  padding-top:3px ;
+  color:#f00;
+}

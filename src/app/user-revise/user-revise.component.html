@@ -1,0 +1,26 @@
+<div class="container1">
+  <h1>个人信息卡</h1>
+  <form>
+    <div class="form-group">
+      <label>Name：</label>
+      <p class="detail">{{user.name}}</p>
+    </div>
+    <div class="form-group">
+      <label>Sex：</label>
+      <p class="detail">{{user.sex}}</p>
+    </div>
+    <div class="form-group">
+      <label>Age：</label>
+      <p class="detail">{{user.age}}</p>
+    </div>
+    <div class="form-group">
+      <label>Tel：</label>
+      <p class="detail">{{user.tel}}</p>
+    </div>
+    <div class="form-group">
+      <label>Address：</label>
+      <p class="detail">{{user.address}}</p>
+    </div>
+    <button type="button" (click)="onUpdate()">编 辑</button>
+  </form>
+</div>
