@@ -90,8 +90,24 @@ form button:disabled {
 .cancel{
   margin-left:30px;
 }
-.sex{
-  margin-left: 30px;
+#gender,#gender1{
+  display: inline-block;
+  height:20px;
+  width:20px;
+  float: left;
+}
+#gender{
+  margin-left: 80px;
+}
+#gender1{
+  margin-left: 40px;
+}
+#genderForm p{
+  display: block;
+  width:30px;
+  height:30px;
+  float: left;
+  margin-left: 10px;
 }
 .alert{
   height:30px;
@@ -100,4 +116,7 @@ form button:disabled {
   margin-left:185px;
   padding-top:3px ;
   color:#f00;
+}
+button.clock{
+  display: none;
 }

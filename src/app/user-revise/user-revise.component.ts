@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class UserReviseComponent {
   public user: User = new User();
+
   constructor (private router: Router) {
     if (!localStorage.getItem(('user'))) {
       this.router.navigate(['/register']);
@@ -17,6 +18,12 @@ export class UserReviseComponent {
     }
   }
   onUpdate() {
+    const user = JSON.stringify(this.user);
+    localStorage.setItem('user', user);
+    this.router.navigate(['/register'], { replaceUrl: true });
+  }
+  onAdd(){
+    localStorage.clear();
     this.router.navigate(['/register']);
   }
 }

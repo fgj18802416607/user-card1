@@ -6,13 +6,16 @@ import { AppComponent } from './app.component';
 import { UserRegisterComponent } from './user-register/user-register.component';
 import { UserReviseComponent } from './user-revise/user-revise.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import {RouteguardService} from "./routeguard.service";
 
 
 @NgModule({
   declarations: [
     AppComponent,
     UserRegisterComponent,
-    UserReviseComponent
+    UserReviseComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -20,7 +23,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [RouteguardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

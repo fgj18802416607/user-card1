@@ -1,6 +1,6 @@
 export class User{
   name: string;
-  sex: string;
+  gender: string;
   age: string;
   tel: string;
   address: string;

@@ -40,12 +40,20 @@ form .detail{
   color: #EEEE00;
 }
 form button{
-  display: block;
-  width: 120px;
-  height:60px;
-  margin:50px auto;
+  font-family: Arial;
+  background-color: #88ff00;
+  border: none;
   border-radius: 5px;
-  color: #4d515a;
+  cursor: pointer;
+  cursor: hand;
+  margin-top:50px;
   font-size: 28px;
-  background: #88ff00;
+  height:60px;
+  width: 120px;
+}
+.add{
+  margin-right: 5px;
+}
+.update{
+  margin-left: 5px;
 }
