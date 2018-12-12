@@ -13,7 +13,7 @@ export class UserRegisterComponent implements OnInit,OnChanges{
   user: User = new User();
   public ok = false;
   constructor(private router: Router,
-              private regsiterguard: RouteguardService,){
+              private regsiterguard: RouteguardService){
     if (localStorage.getItem('user')) {
       this.user = JSON.parse(localStorage.getItem('user'));
     }

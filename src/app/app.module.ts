@@ -9,6 +9,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import {RouteguardService} from "./routeguard.service";
 import { UserPracticeComponent } from './user-practice/user-practice.component';
+import { MultiplePipe } from './pipe/multiple.pipe';
+import { Practice1Component } from './user-practice/practice1/practice1.component';
+import { Practice2Component } from './user-practice/practice2/practice2.component';
 
 
 @NgModule({
@@ -18,6 +21,9 @@ import { UserPracticeComponent } from './user-practice/user-practice.component';
     UserReviseComponent,
     HomeComponent,
     UserPracticeComponent,
+    MultiplePipe,
+    Practice1Component,
+    Practice2Component,
   ],
   imports: [
     BrowserModule,

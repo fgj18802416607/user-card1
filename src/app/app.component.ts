@@ -7,10 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // constructor(private aa:Router){
-  //   this.aa.navigate()
-  //   this.aa.navigateByUrl()
-  // }
+  public practice = true;
+  constructor(){
+    if(localStorage.getItem(('user'))){
+        this.practice = true;
+    }else{
+        this.practice = false;
+    }
+  }
+
 }
 
 

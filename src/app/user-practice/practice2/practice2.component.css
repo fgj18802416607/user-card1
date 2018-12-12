@@ -1,0 +1,50 @@
+.all{
+  width: 28%;
+  height:300px;
+  margin: 50px auto;
+  overflow: hidden;
+  background: #039be5;
+  padding:10px;
+  border-radius: 20px;
+}
+
+.allLeft{
+  width: 40%;
+  float: left;
+}
+
+.allRight{
+  width: 40%;
+  float: right;
+}
+
+button{
+  display: block;
+  width: 80px;
+  height: 30px;
+  margin: 0 auto;
+  background-color: #f60;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+.allLeft div {
+  padding-top: 10px;
+}
+
+.allRight div {
+  padding-top: 10px;
+}
+
+ul{
+  padding:0;
+}
+
+li{
+  width:80px;
+  height:20px;
+  list-style: none;
+  color: #88ff00;
+}

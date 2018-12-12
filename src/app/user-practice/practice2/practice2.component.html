@@ -1,0 +1,22 @@
+<p>
+  practice2 works!
+</p>
+<div class="all">
+  <div class="allLeft">
+    <button (click)="onGmoodClick()">全局心情</button>
+    <div>
+      <ul>
+        <li *ngFor = 'let mood of Gmood'> {{mood}} </li>
+      </ul>
+
+    </div>
+  </div>
+  <div class="allRight">
+    <button (click)="onMmoodClick()">局部心情</button>
+    <div>
+      <ul>
+        <li *ngFor = 'let mood of Mmood'> {{mood}} </li>
+      </ul>
+    </div>
+  </div>
+</div>
