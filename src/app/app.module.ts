@@ -8,6 +8,7 @@ import { UserReviseComponent } from './user-revise/user-revise.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import {RouteguardService} from "./routeguard.service";
+import { UserPracticeComponent } from './user-practice/user-practice.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import {RouteguardService} from "./routeguard.service";
     UserRegisterComponent,
     UserReviseComponent,
     HomeComponent,
+    UserPracticeComponent,
   ],
   imports: [
     BrowserModule,

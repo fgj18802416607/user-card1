@@ -24,6 +24,6 @@ export class UserReviseComponent {
   }
   onAdd(){
     localStorage.clear();
-    this.router.navigate(['/register']);
+    this.router.navigate(['/register'],{ queryParams: { id: 1 } });
   }
 }
