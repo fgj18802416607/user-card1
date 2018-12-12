@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import {window} from "rxjs/internal/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -19,9 +20,11 @@ export class DefaultguardService implements CanActivate {
     }
     else if(!localStorage.getItem('user')){
       if(state.url === '/home'){
-        return false;
+        // return false;
+        return alert('你还没有填写或保存信息，别想离开');
       }else if(state.url === '/userPractice'){
-        return false;
+        // return false;
+        return alert('你还没有填写或保存信息，别想离开');
       }
     }
     return true;
