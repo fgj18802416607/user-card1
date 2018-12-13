@@ -5,8 +5,6 @@ import { Injectable } from '@angular/core';
 })
 export class GlobalMoodService {
 
-  n = 0;
-
   constructor() { }
 
   MoodBase: Array<any> = [
@@ -17,5 +15,6 @@ export class GlobalMoodService {
     '心烦意乱'
   ];
 
-  GLBmood:Array<any> = [];
+  GLBmood: Array<any> = [
+  ];
 }

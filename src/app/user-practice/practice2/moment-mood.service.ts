@@ -14,4 +14,8 @@ export class MomentMoodService {
     '火冒三丈',
     '发指眦裂'
   ];
+
+  thisMmood () {
+    return this.MONmood;
+  }
 }
