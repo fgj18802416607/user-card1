@@ -18,7 +18,7 @@ export class MultiplePipe implements PipeTransform {
     const String2 = new Array('', '拾', '佰');
     const String3 = new Array('角', '分');
     const Chyuan='元';
-    const reg = /^\d{1,3}(?:\.\d{1,2})?$/;
+    const reg = /^\d{0,3}(?:\.\d{0,2})?$/;
 
     if(chinese === ""){
       return '';
@@ -28,7 +28,8 @@ export class MultiplePipe implements PipeTransform {
 
     let chinese1 = parseFloat(chinese);
     if (chinese1 === 0) {
-      Chall = String1 +  Chyuan;
+      Chall = '这是大零蛋啊';
+      // Chall = String1[0] +  Chyuan;
       return Chall;
     }
 
@@ -45,32 +46,31 @@ export class MultiplePipe implements PipeTransform {
       let Chflen = Chfirst.length;
       let zero = 0;
       for (let i = 0; i < Chflen; i++) {
-        let intChar = Chfirst.substr(i, 1);
+        let firChar = Chfirst.substr(i, 1);
         let intSlen = Chflen - i - 1;
         let remain = intSlen % 3;
-        if (intChar === '0') {
+        if (firChar === '0') {
           zero++;
         } else {
           if (zero > 0) {
             Chall += String1[0];
           }
           zero = 0;
-          Chall += String1[parseInt(intChar)] + String2[remain];
+          Chall += String1[parseInt(firChar)] + String2[remain];
         }
       }
-
       Chall += Chyuan;
     }
 
     if (Chend !== '') {
       let Chelen = Chend.length;
       for (let i = 0; i < Chelen; i++) {
-        let decChar = Chend.substr(i, 1);
-        if (decChar !== '0') {
-          Chall += String1[parseInt(decChar)] + String3[i];
+        let endChar = Chend.substr(i, 1);
+        if (endChar !== '0') {
+          Chall += String1[parseInt(endChar)] + String3[i];
         }
-        if (decChar === '0' && parseInt(Chfirst, 10) > 0) {
-          Chall += String1[parseInt(decChar)] + String3[i];
+        if (endChar === '0' && parseInt(Chfirst, 10) > 0) {
+          Chall += String1[parseInt(endChar)] + String3[i];
         }
       }
     } else {
