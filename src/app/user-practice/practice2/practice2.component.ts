@@ -9,12 +9,30 @@ import { MomentMoodService } from './moment-mood.service';
 })
 export class Practice2Component implements OnInit {
 
-  constructor(private gmood: GlobalMoodService,
-              private mmood: MomentMoodService
+  constructor(private glbmood: GlobalMoodService,
+              private monmood: MomentMoodService
   ) { }
 
+  GLBmood = [];
+  MONmood = [];
+  m = 0;
 
   ngOnInit() {
+  }
+  onGLBmoodClick() {
+    const random: number = Math.floor(Math.random() * 5);
+    this.GLBmood[this.glbmood.n] = this.glbmood.MoodBase[random];
+    if(this.glbmood.n<5){
+      this.glbmood.n++;
+    }
+  }
+
+  onMONmoodClick() {
+    const random: number = Math.floor(Math.random() * 5);
+    this.MONmood[this.m] = this.monmood.MONmood[random];
+    if(this.m<5){
+      this.m++;
+    }
   }
 
 
