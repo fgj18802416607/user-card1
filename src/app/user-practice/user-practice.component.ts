@@ -10,5 +10,4 @@ export class UserPracticeComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
