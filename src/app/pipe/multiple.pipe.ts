@@ -6,6 +6,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class MultiplePipe implements PipeTransform {
 
   transform(chinese: any): any {
+    // const aa = {'1':'车','2':'房子'};
+    //
+    // return aa[chinese];
 
     let Chall='';
     let Chfirst;
@@ -74,9 +77,5 @@ export class MultiplePipe implements PipeTransform {
       Chall ;
     }
     return Chall
-
   };
-
-
-
 }
