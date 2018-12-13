@@ -7,11 +7,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./practice1.component.css']
 })
 export class Practice1Component implements OnInit {
-  public gold ="";
+  public gold :any="";
   constructor(private router: Router) {
 
   }
 
+  // aaa(event){
+  //   if(event.target.value){
+  //     this.gold=event.target.value=parseFloat(event.target.value)
+  //   }
+  // }
   ngOnInit() {
   }
 

@@ -9,7 +9,6 @@ export class MultiplePipe implements PipeTransform {
     // const aa = {'1':'车','2':'房子'};
     //
     // return aa[chinese];
-
     let Chall='';
     let Chfirst;
     let Chend;
@@ -26,10 +25,8 @@ export class MultiplePipe implements PipeTransform {
       return '不符合规则';
     }
 
-    let chinese1 = parseFloat(chinese);
-    if (chinese1 === 0) {
+    if (parseFloat(chinese) === 0) {
       Chall = '这是大零蛋啊';
-      // Chall = String1[0] +  Chyuan;
       return Chall;
     }
 
@@ -56,7 +53,7 @@ export class MultiplePipe implements PipeTransform {
             Chall += String1[0];
           }
           zero = 0;
-          Chall += String1[parseInt(firChar)] + String2[remain];
+            Chall += String1[parseInt(firChar)] + String2[remain];
         }
       }
       Chall += Chyuan;
