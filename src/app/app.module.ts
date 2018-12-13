@@ -12,6 +12,7 @@ import { UserPracticeComponent } from './user-practice/user-practice.component';
 import { MultiplePipe } from './pipe/multiple.pipe';
 import { Practice1Component } from './user-practice/practice1/practice1.component';
 import { Practice2Component } from './user-practice/practice2/practice2.component';
+import { Practice3Component } from './user-practice/practice3/practice3.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { Practice2Component } from './user-practice/practice2/practice2.componen
     MultiplePipe,
     Practice1Component,
     Practice2Component,
+    Practice3Component,
   ],
   imports: [
     BrowserModule,
