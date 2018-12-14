@@ -22,8 +22,7 @@ export class Practice3Component implements OnInit {
     timeNow.subscribe(n => this.today = new Date());
   }
   start = '开始';
-  stop = '暂停';
-  reset = '重置';
+  reset = '停止';
   public data = 0;
   public m = 1;
   public sub;
@@ -32,27 +31,22 @@ export class Practice3Component implements OnInit {
     const timeNow = interval(1000);
     if(this.start === '开始'){
       this.sub = timeNow.subscribe(n => this.data += this.m);
+      this.start = '暂停';
+    }else if(this.start === '暂停'){
+          this.sub.unsubscribe();
+          let m =0;
+          this.sub = timeNow.subscribe(n => this.data += m);
+          this.start = '继续';
     }else if(this.start === '继续'){
       this.sub = timeNow.subscribe(n => this.data += this.m);
-    }
-  }
-
-  onStop(){
-    if(this.stop === '暂停'){
-      const timeNow = interval(1000);
-      this.sub.unsubscribe();
-      let m =0;
-      this.sub = timeNow.subscribe(n => this.data += m);
-      this.start = '继续';
+      this.start = '暂停';
     }
   }
 
   onReset(){
     this.sub.unsubscribe();
-    this.data = 0;
     this.start = '开始';
-    this.stop = '暂停';
+    this.data = 0;
   }
-
 }
 
