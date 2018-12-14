@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'multiple'
 })
 export class MultiplePipe implements PipeTransform {
-
+  // onkeyup='this.value=this.value.replace(/[^0-9]*$/,"")' onblur='this.value=this.value.replace(/^[0]+[0-9]*$/gi,"
   transform(chinese: any): any {
     // const aa = {'1':'车','2':'房子'};
     //
@@ -17,15 +17,15 @@ export class MultiplePipe implements PipeTransform {
     const String2 = new Array('', '拾', '佰');
     const String3 = new Array('角', '分');
     const Chyuan='元';
-    const reg = /^\d{0,3}(?:\.\d{0,2})?$/;
+    const reg = /^\d{1,3}(?:\.\d{1,2})?$/;
 
     if(chinese === ""){
       return '';
     }else if(!reg.test(chinese)){
       return '不符合规则';
     }
-
-    if (parseFloat(chinese) === 0) {
+    let  chinese1 = parseFloat(chinese);
+    if ( chinese1 === 0) {
       Chall = '这是大零蛋啊';
       return Chall;
     }

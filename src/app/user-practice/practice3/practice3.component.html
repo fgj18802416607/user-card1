@@ -1,3 +1,9 @@
 <div class="time">
   <label>当前时间：</label><div>{{today | date:'yyyy-MM-dd HH:mm:ss'}}</div>
 </div>
+
+
+<button (click)="onStart()">{{start}}</button>
+<button (click)="onStop()">{{stop}}</button>
+<button (click)="onReset()">{{reset}}</button>
+<div>{{data}}</div>
