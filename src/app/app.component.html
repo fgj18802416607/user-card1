@@ -1,6 +1,6 @@
 <nav>
   <a routerLink="home">主页</a>
   <a routerLink="userRevise">个人信息</a>
-  <a routerLink="userPractice" ng-hide="practice">练习</a>
+  <a routerLink="userPractice" [class.hide]="practice">练习</a>
 </nav>
 <router-outlet></router-outlet>

@@ -2,12 +2,6 @@
 import {CanDeactivate} from "@angular/router";
 import { UserRegisterComponent } from './user-register/user-register.component';
 
-
-// export class RouteguardService implements CanActivate{
-//   canActivate(){
-//     return window.confirm("是否进入");
-//   }
-// }
 export class RouteguardService implements CanDeactivate<UserRegisterComponent> {
   public num: number;
   canDeactivate(component: UserRegisterComponent) {

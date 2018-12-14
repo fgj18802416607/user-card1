@@ -1,21 +1,24 @@
-<p>
-  practice2 works!
-</p>
-<div class="all">
-  <div class="allLeft">
-    <button (click)="onGLBmoodClick()">全局心情</button>
-    <div>
-      <ul>
-        <li *ngFor = 'let gmood of GLBmood'> {{gmood}} </li>
-      </ul>
+<div id="practice2">
+  <p>
+    practice2 works!
+  </p>
+  <div class="all">
+    <div class="allLeft">
+      <button (click)="onGLBmoodClick()">全局心情</button>
+      <div>
+        <ul>
+          <li *ngFor = 'let gmood of GLBmood'> {{gmood}} </li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="allRight">
-    <button (click)="onMONmoodClick()">局部心情</button>
-    <div>
-      <ul>
-        <li *ngFor = 'let mmood of MONmood'> {{mmood}} </li>
-      </ul>
+    <div class="allRight">
+      <button (click)="onMONmoodClick()">局部心情</button>
+      <div>
+        <ul>
+          <li *ngFor = 'let mmood of MONmood'> {{mmood}} </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
+

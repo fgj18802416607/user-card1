@@ -9,6 +9,8 @@ import { UserPracticeComponent } from './user-practice/user-practice.component';
 import { Practice1Component } from './user-practice/practice1/practice1.component';
 import { Practice2Component } from './user-practice/practice2/practice2.component';
 import { Practice3Component } from './user-practice/practice3/practice3.component';
+import { Practice4Component } from './user-practice/practice4/practice4.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -16,11 +18,24 @@ const routes: Routes = [
   { path: 'register', component: UserRegisterComponent,
     canDeactivate:[RouteguardService],canActivate:[DefaultguardService]},
   { path: 'userRevise', component: UserReviseComponent,canActivate:[DefaultguardService]},
-  { path: 'userPractice', component: UserPracticeComponent,canActivate:[DefaultguardService]},
-  { path: 'userPractice/practice1', component: Practice1Component },
-  { path: 'userPractice/practice2', component: Practice2Component },
-  { path: 'userPractice/practice3', component: Practice3Component }
-];
+  { path: 'userPractice', children: [
+    {
+      path: 'practice1',
+      component: Practice1Component
+    },
+    {
+      path: 'practice2',
+      component: Practice2Component
+    },
+    {
+      path: 'practice3',
+      component: Practice3Component
+    },
+    {
+      path: 'practice4',
+      component: Practice4Component
+    }],component: UserPracticeComponent,canActivate:[DefaultguardService]}
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

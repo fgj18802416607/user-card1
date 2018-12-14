@@ -6,15 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public practice = true;
+  public  practice;
   constructor(){
     if(localStorage.getItem(('user'))){
-        this.practice = true;
-    }else{
         this.practice = false;
     }
   }
-
 }
 
 

@@ -1,6 +1,12 @@
-<div class="time">
-  <label>当前时间：</label><div>{{today | date:'yyyy-MM-dd HH:mm:ss'}}</div>
+<div id="practice3">
+  <p>
+    practice3 works!
+  </p>
+  <div class="time">
+    <label>当前时间：</label><div>{{today | date:'yyyy-MM-dd HH:mm:ss'}}</div>
+  </div>
+  <button (click)="practice3.onStart()">{{practice3.start}}</button>
+  <button (click)="practice3.onReset()" [class.hide]="practice3.onreset">{{practice3.reset}}</button>
+  <div class="second">{{ practice3.data }}</div>
 </div>
-<button (click)="practice3.onStart()">{{practice3.start}}</button>
-<button (click)="practice3.onReset()" [class.hide]="practice3.onreset">{{practice3.reset}}</button>
-<div>{{ practice3.data }}</div>
+
