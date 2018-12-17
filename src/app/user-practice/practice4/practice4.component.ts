@@ -23,7 +23,8 @@ export class Practice4Component implements OnInit {
       zoom:11,
       isHotspot: true
     });
-    AMap.plugin('AMap.ToolBar',function(){
+    // AMap.plugin('AMap.ToolBar',function(){
+    AMap.plugin('AMap.ToolBar',()=>{
       let toolbar = new AMap.ToolBar();
       map.addControl(toolbar)
       map.add(marker);
