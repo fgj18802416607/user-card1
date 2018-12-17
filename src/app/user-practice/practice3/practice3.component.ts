@@ -16,7 +16,7 @@ export class Practice3Component implements OnInit,OnDestroy{
 
   ngOnInit() {
     this.today =new Date();
-    this.timeNow = interval(1000).subscribe(n => {
+    this.timeNow = interval(1000).subscribe(() => {
       this.today = new Date()
     console.log('a');
     });
