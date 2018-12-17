@@ -37,22 +37,26 @@ export class Practice4Component implements OnInit {
     //构造地点查询类
     const placeSearch = new AMap.PlaceSearch();
     const infoWindow=new AMap.AdvancedInfoWindow({});
-    map.on('hotspotclick', function(result) {
-      placeSearch.getDetails(result.id, function(status, result) {
+    map.on('hotspotclick', (result) => {
+      // placeSearch.getDetails(result.id, function(status, result)
+      // {
+      placeSearch.getDetails(result.id, (status, result) => {
         if (status === 'complete' && result.info === 'OK') {
           placeSearch_CallBack(result);
         }
       });
     });
     //回调函数
-    function placeSearch_CallBack(data) { //infoWindow.open(map, result.lnglat);
+    // function placeSearch_CallBack(data) { //infoWindow.open(map, result.lnglat);
+    let placeSearch_CallBack = (data)=>{
       const poiArr = data.poiList.pois;
       const location = poiArr[0].location;
       infoWindow.setContent(createContent(poiArr[0]));
       infoWindow.open(map,location);
     }
     //信息窗体内容
-    function createContent(poi) {
+    // function createContent(poi) {
+    let createContent = (poi)=>{
       const s = [];
       s.push('<div class="info-title" style="font-weight: bolder;color: #fff;font-size: 14px;line-height: 26px;padding: 0 0 0 6px;background: #25A5F7;">'+poi.name+'</div>' +
         '<div class="info-content" style="padding: 4px;color: #666666;line-height: 23px;font: 12px Helvetica, \'Hiragino Sans GB\', \'Microsoft Yahei\', \'微软雅黑\', Arial;">'+"地址：" + poi.address);
@@ -80,7 +84,8 @@ export class Practice4Component implements OnInit {
         offset: new AMap.Pixel(0, -31)
       });
 
-      function openInfoWin() {
+      // function openInfoWin() {
+      let openInfoWin = ()=>{
         infoWindow.open(map, marker.getPosition());
       }
 
